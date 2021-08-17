@@ -93,7 +93,7 @@ grid.arrange(HisSl + ggtitle(""),
 
 ```{r}
 
-DhistPl <-    ggplot(iris, aes(x=PetalLengthCm, colour=Species, fill=Species)) +
+DhistPl <- ggplot(iris, aes(x=PetalLengthCm, colour=Species, fill=Species)) +
   geom_density(alpha=.3) +
   geom_vline(aes(xintercept=mean(PetalLengthCm),  colour=Species),linetype="dashed",color="grey", size=1)+
   xlab("Petal Length (cm)") +  

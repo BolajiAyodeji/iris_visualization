@@ -187,26 +187,26 @@ iris=read.csv(&#39;./Iris.csv&#39;)
 
 iris[sample(nrow(iris),20),]</code></pre>
 <pre><code>##      Id SepalLengthCm SepalWidthCm PetalLengthCm PetalWidthCm         Species
-## 115 115           5.8          2.8           5.1          2.4  Iris-virginica
-## 128 128           6.1          3.0           4.9          1.8  Iris-virginica
-## 99   99           5.1          2.5           3.0          1.1 Iris-versicolor
-## 48   48           4.6          3.2           1.4          0.2     Iris-setosa
-## 10   10           4.9          3.1           1.5          0.1     Iris-setosa
-## 38   38           4.9          3.1           1.5          0.1     Iris-setosa
-## 83   83           5.8          2.7           3.9          1.2 Iris-versicolor
-## 104 104           6.3          2.9           5.6          1.8  Iris-virginica
-## 46   46           4.8          3.0           1.4          0.3     Iris-setosa
-## 120 120           6.0          2.2           5.0          1.5  Iris-virginica
-## 32   32           5.4          3.4           1.5          0.4     Iris-setosa
-## 107 107           4.9          2.5           4.5          1.7  Iris-virginica
-## 36   36           5.0          3.2           1.2          0.2     Iris-setosa
+## 112 112           6.4          2.7           5.3          1.9  Iris-virginica
+## 34   34           5.5          4.2           1.4          0.2     Iris-setosa
+## 96   96           5.7          3.0           4.2          1.2 Iris-versicolor
+## 66   66           6.7          3.1           4.4          1.4 Iris-versicolor
+## 23   23           4.6          3.6           1.0          0.2     Iris-setosa
+## 102 102           5.8          2.7           5.1          1.9  Iris-virginica
+## 137 137           6.3          3.4           5.6          2.4  Iris-virginica
+## 81   81           5.5          2.4           3.8          1.1 Iris-versicolor
 ## 126 126           7.2          3.2           6.0          1.8  Iris-virginica
-## 26   26           5.0          3.0           1.6          0.2     Iris-setosa
-## 68   68           5.8          2.7           4.1          1.0 Iris-versicolor
-## 22   22           5.1          3.7           1.5          0.4     Iris-setosa
-## 25   25           4.8          3.4           1.9          0.2     Iris-setosa
+## 123 123           7.7          2.8           6.7          2.0  Iris-virginica
+## 131 131           7.4          2.8           6.1          1.9  Iris-virginica
+## 150 150           5.9          3.0           5.1          1.8  Iris-virginica
 ## 47   47           5.1          3.8           1.6          0.2     Iris-setosa
-## 69   69           6.2          2.2           4.5          1.5 Iris-versicolor</code></pre>
+## 36   36           5.0          3.2           1.2          0.2     Iris-setosa
+## 44   44           5.0          3.5           1.6          0.6     Iris-setosa
+## 117 117           6.5          3.0           5.5          1.8  Iris-virginica
+## 120 120           6.0          2.2           5.0          1.5  Iris-virginica
+## 41   41           5.0          3.5           1.3          0.3     Iris-setosa
+## 114 114           5.7          2.5           5.0          2.0  Iris-virginica
+## 33   33           5.2          4.1           1.5          0.1     Iris-setosa</code></pre>
 </div>
 <div id="frequency-analysis-with-histogram" class="section level2">
 <h2>Frequency analysis with Histogram</h2>
@@ -265,7 +265,7 @@ grid.arrange(HisSl + ggtitle(&quot;&quot;),
 </div>
 <div id="density-analysis-with-histogram" class="section level2">
 <h2>Density analysis with Histogram</h2>
-<pre class="r"><code>DhistPl &lt;-    ggplot(iris, aes(x=PetalLengthCm, colour=Species, fill=Species)) +
+<pre class="r"><code>DhistPl &lt;- ggplot(iris, aes(x=PetalLengthCm, colour=Species, fill=Species)) +
   geom_density(alpha=.3) +
   geom_vline(aes(xintercept=mean(PetalLengthCm),  colour=Species),linetype=&quot;dashed&quot;,color=&quot;grey&quot;, size=1)+
   xlab(&quot;Petal Length (cm)&quot;) +  
